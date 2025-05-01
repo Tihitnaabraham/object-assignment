@@ -90,8 +90,39 @@ console.log((getAvarage(scors)));
 // const firststudent=new Student("Tihitna",[80,79,45])
 //     const secondstudent=new Student("Beki"[56,89,89])
 
+//4
+class ShoppingCart {
 
+    constructor() {
+    
+    this.items = [];
+    
+    }
+    
+    addItem(item) {
+    
+    this.items.push(item); }
+    
+    getTotal() {
+    
+    let total = 0;
+    
+    for (let i=0; i < this.items.length; i++) {
+    
+    total += this.items[i].price;
+    
+    }
+  return total}
+}
+const cart = new ShoppingCart();
 
+cart.addItem({ name: "Shirt", price: 25 });
+
+cart.addItem({ name: "Pants", price: 50});
+
+cart.addItem({ name: "Shoes", price: 75});
+
+console.log("Total:", cart.getTotal()); 
 //5
 
 function Movie(title, year, rating) {
